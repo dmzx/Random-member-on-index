@@ -132,4 +132,3 @@ class admin_controller
 		$this->u_action = $u_action;
 	}
 }
-	
