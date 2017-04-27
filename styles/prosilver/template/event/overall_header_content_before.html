@@ -1,0 +1,9 @@
+<!-- IF S_RANDOMMEMBERONINDEX_ENABLE and S_USER_LOGGED_IN -->
+<!-- INCLUDEJS @dmzx_randommemberonindex/js/randommemberonindex.js -->
+	<!-- BEGIN random_member -->
+	<div id="randommemberonindex">
+		<!-- IF S_RANDOMMEMBERONINDEX_CLOSE --><a href="{U_RANDOMMEMBERONINDEX_CLOSE}" data-ajax="close_randommemberonindex" data-overlay="false" class="closed clearfix" title="{L_RANDOMMEMBERONINDEX_CLOSE}"></a><!-- ENDIF -->
+		<div>{random_member.USERNAME_FULL}</div>
+	</div>
+	<!-- END random_member -->
+<!-- ENDIF -->

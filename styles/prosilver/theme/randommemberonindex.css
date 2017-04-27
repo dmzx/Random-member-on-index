@@ -1,0 +1,58 @@
+#randommemberonindex {
+	margin: 10px 0;
+	font-size: 1.1em;
+	padding: 10px;
+	border-radius: 7px;
+	background-color: #F6F8F8;
+	box-shadow: 0 0 4px #000000;
+	text-align: center;
+    font-weight: bold;
+}
+
+#randommemberonindex div {
+	margin: 0;
+	overflow-x: auto;
+	overflow: hidden;
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+
+#randommemberonindex .closed {
+	float: right;
+	margin: 0 0 0 4px;
+	width: 12px;
+	height: 12px;
+	background: transparent url("images/close.png") no-repeat 0 0;
+	opacity: 0.6;
+}
+
+.rtl #randommemberonindex .closed {
+	float: left;
+	margin: 0 4px 0 0;
+}
+
+.notouch #randommemberonindex .closed {
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+.notouch #randommemberonindex:hover .closed {
+	opacity: 0.6;
+}
+
+#randommemberonindex ul, #randommemberonindex ol {
+	margin-left: 20px;
+}
+
+.rtl #randommemberonindex ul, .rtl #randommemberonindex ol {
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+.clearfix:after {
+	content: '.';
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}

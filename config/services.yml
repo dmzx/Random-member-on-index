@@ -1,0 +1,28 @@
+services:
+    dmzx.randommemberonindex.admin.controller:
+        class: dmzx\randommemberonindex\controller\admin_controller
+        arguments:
+            - '@template'
+            - '@user'
+            - '@request'
+            - '@config'
+            - '@log'
+            - '@dbal.conn'
+    dmzx.randommemberonindex.controller:
+        class: dmzx\randommemberonindex\controller\controller
+        arguments:
+            - '@dbal.conn'
+            - '@controller.helper'
+            - '@request'
+            - '@user'
+    dmzx.randommemberonindex.events:
+        class: dmzx\randommemberonindex\event\main_listener
+        arguments:
+            - '@user'
+            - '@dbal.conn'
+            - '@config'
+            - '@template'
+            - '@controller.helper'
+            - '@request'
+        tags:
+            - { name: event.listener }

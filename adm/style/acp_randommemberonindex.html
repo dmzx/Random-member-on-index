@@ -1,0 +1,52 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_RANDOMMEMBERONINDEX_CONFIG_TITLE}</h1>
+
+<p><img src="https://img.shields.io/badge/{{ lang('Version') }}-{{ RANDOMMEMBERONINDEX_VERSION }}-green.svg?style=plastic" /></p>
+
+<form id="acp_randommemberonindex" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_ACP_RANDOMMEMBERONINDEX_CONFIG}</legend>
+		<dl>
+			<dt>
+				<label for="randommemberonindex_enable">{L_RANDOMMEMBERONINDEX_ENABLE}{L_COLON}</label><br />
+				<span>{L_RANDOMMEMBERONINDEX_ENABLE_EXPLAIN}</span>
+			</dt>
+			<dd>
+				<label><input type="radio" class="radio" name="randommemberonindex_enable" value="1"<!-- IF RANDOMMEMBERONINDEX_ENABLE --> id="randommemberonindex_enable" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="randommemberonindex_enable" value="0"<!-- IF not RANDOMMEMBERONINDEX_ENABLE --> id="randommemberonindex_enable" checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="randommemberonindex_enable">{L_RANDOMMEMBERONINDEX_CLOSE}{L_COLON}</label><br />
+				<span>{L_RANDOMMEMBERONINDEX_CLOSE_EXPLAIN}</span>
+			</dt>
+			<dd>
+				<label><input type="radio" class="radio" name="randommemberonindex_close" value="1"<!-- IF RANDOMMEMBERONINDEX_CLOSE --> id="randommemberonindex_close" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+				<label><input type="radio" class="radio" name="randommemberonindex_close" value="0"<!-- IF not RANDOMMEMBERONINDEX_CLOSE --> id="randommemberonindex_close" checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+		<dl class="randommemberonindex_toggle"<!-- IF not RANDOMMEMBERONINDEX_CLOSE --> style="display: none;"<!-- ENDIF -->>
+			<dt>
+				<label for="randommemberonindex_purge">{L_RANDOMMEMBERONINDEX_RESET}{L_COLON}</label><br />
+				<span>{L_RANDOMMEMBERONINDEX_RESET_EXPLAIN}</span>
+			</dt>
+			<dd>
+				<input class="button1" type="submit" id="randommemberonindex_purge" name="randommemberonindex_purge" value="{L_RANDOMMEMBERONINDEX_RESET_BUTTON}" />
+				<label>{L_RANDOMMEMBERONINDEX_RESET_CONFIRM}{L_COLON}</label>
+				<label><input type="radio" name="randommemberonindex_purge_confirm" value="1" /> {L_YES}</label>
+				<label><input type="radio" name="randommemberonindex_purge_confirm" value="0" id="randommemberonindex_purge_confirm" checked="checked" /> {L_NO}</label>
+			</dd>
+		</dl>
+		<p class="submit-buttons">
+			<input type="hidden" name="action" value="save" />
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+			{S_FORM_TOKEN}
+		</p>
+	</fieldset>
+</form>
+
+<!-- INCLUDEJS @dmzx_randommemberonindex/randommemberonindex_adm.js -->
+<!-- INCLUDE overall_footer.html -->
