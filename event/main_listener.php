@@ -119,7 +119,7 @@ class main_listener implements EventSubscriberInterface
 			$this->template->assign_vars(array(
 				'S_RANDOMMEMBERONINDEX_ENABLE' 	=> $this->config['randommemberonindex_enable'],
 				'S_RANDOMMEMBERONINDEX_CLOSE' 	=> $this->config['randommemberonindex_close'],
-				'U_RANDOMMEMBERONINDEX_CLOSE'	=> $this->helper->route('randommemberonindex_controller', array(
+				'U_RANDOMMEMBERONINDEX_CLOSE'	=> $this->helper->route('dmzx_randommemberonindex_controller', array(
 					'hash' => generate_link_hash('close_randommemberonindex')
 				)),
 			));
