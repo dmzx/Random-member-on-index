@@ -1,3 +1,3 @@
-randommemberonindex_controller:
+dmzx_randommemberonindex_controller:
     pattern: /randommemberonindex/closed
     defaults: { _controller: dmzx.randommemberonindex.controller:close_randommemberonindex }
