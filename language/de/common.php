@@ -3,7 +3,7 @@
 *
 * @version $Id: common.php 90 2017-04-27 08:48:52Z Scanialady $
 * @package phpBB Extension - Random member on index (deutsch)
-* @copyright (c) 2017 dmzx - http://www.dmzx-web.net
+* @copyright (c) 2017 dmzx - https://www.dmzx-web.net
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */

@@ -2,30 +2,31 @@
 	"name": "dmzx/randommemberonindex",
 	"type": "phpbb-extension",
 	"description": "This extension will add an random member on index.",
-	"homepage": "http://www.dmzx-web.net",
-	"version": "1.0.0",
-	"time": "2017-04-24",
+	"homepage": "https://www.dmzx-web.net",
+	"version": "1.0.1",
+	"time": "2019-11-04",
 	"keywords": [
 		"phpbb",
 		"extension",
 		"randommemberonindex"
 	],
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"authors": [
 		{
 			"name": "dmzx",
-			"homepage": "http://www.dmzx-web.net",
+			"homepage": "https://www.dmzx-web.net",
 			"email": "info@dmzx-web.net",
 			"role": "Extension Developer"
 		},
 		{
 			"name": "martin",
-			"homepage": "http://www.martins.homelinux.net",
+			"homepage": "https://www.martins-phpbb.com",
 			"role": "Extension Developer"
 		}
 	],
 	"require": {
-		"php": ">=5.3.3"
+		"php": ">=5.4",
+		"composer/installers": "~1.0"
 	},
 	"require-dev": {
 		"phpbb/epv": "dev-master"
@@ -33,12 +34,13 @@
 	"extra": {
 		"display-name": "Random member on index",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.0,<3.3"
+			"phpbb/phpbb": ">=3.1.0,<4.0.0@dev"
 		},
 		"version-check": {
 			"host": "www.dmzx-web.net",
 			"directory": "/versions",
-			"filename": "randommemberonindex_version.json"
+			"filename": "randommemberonindex_version.json",
+			"ssl": true
 		}
 	}
 }
